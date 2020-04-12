@@ -1,13 +1,9 @@
-import { Client, QueryResult } from "pg";
+import { Client } from "pg";
 import { PG_CONNECTION } from "../config";
 import { DataAccess } from "./";
 
 export class Postgres implements DataAccess {
-    client: Client
     constructor() {
-        this.client = new Client({
-            connectionString: PG_CONNECTION
-        });
     }
     /**
      * 执行查询
@@ -15,9 +11,12 @@ export class Postgres implements DataAccess {
      * @param params 参数
      */
     async query<T>(sql: string, params: any[]): Promise<T[]> {
-        await this.client.connect();
-        const res = await this.client.query(sql, params);
-        await this.client.end()
+        const client = new Client({
+            connectionString: PG_CONNECTION
+        });
+        await client.connect();
+        const res = await client.query(sql, params);
+        await client.end();
         return res.rows;
     }
 }

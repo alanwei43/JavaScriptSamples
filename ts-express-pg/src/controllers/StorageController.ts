@@ -1,5 +1,5 @@
 import express from "express";
-import { Controller } from "./controller";
+import { Controller } from "./controllers";
 import { StorageService } from "../services";
 
 export class StorageController implements Controller {
@@ -13,15 +13,29 @@ export class StorageController implements Controller {
         this.initRouters()
     }
     initRouters() {
-        this.router.get(`${this.basePath}/say-hello`, async (req, res) => {
-            this.sayHello(req, res);
+        this.router.get(`${this.basePath}/files`, async (req, res) => {
+            this.getFiles(req, res);
+        });
+        this.router.get(`${this.basePath}/group`, async (req, res) => {
+            this.getAllGroups(res);
         });
     }
-    async sayHello(request: express.Request, response: express.Response) {
+    async getAllGroups(response: express.Response) {
+        const groups = await this.svcStorage.findGroups();
+        response.json({
+            "code": 2,
+            "message": null,
+            "data": groups,
+            "success": true
+        });
+    }
+    async getFiles(request: express.Request, response: express.Response) {
         const result = await this.svcStorage.findAll();
         response.json({
-            r: result,
-            date: new Date().toISOString()
+            "code": 0,
+            "message": null,
+            "data": result,
+            "success": true
         });
     }
 }
