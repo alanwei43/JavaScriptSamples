@@ -2,6 +2,7 @@ import { Options } from "yargs";
 import http from "http";
 import express from "express";
 import ws from "ws";
+import bodyParser from "body-parser";
 
 export const command = "web [port]";
 export const desc = "启动web服务";
@@ -29,6 +30,8 @@ export const handler = function (argv: { port: number, enableSocket: boolean, ws
     const app = express();
     const server = http.createServer(app);
 
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
     app.use(express.static("public"));
 
     if (argv.enableSocket) {
