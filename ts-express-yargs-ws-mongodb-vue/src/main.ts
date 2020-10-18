@@ -9,4 +9,5 @@ commandDir("commands", {
   .version("version", "显示版本号", "0.0.1")
   .help("help", "显示帮助")
   .example("$0 web 8083", "启动Web服务, 监听8083端口号")
+  .example("$0 excel [file]", "JSON 转 Excel")
   .argv;
