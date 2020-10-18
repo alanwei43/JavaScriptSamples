@@ -1,5 +1,3 @@
-# wuhan-fgj-fe
-
 ## Project setup
 ```
 npm install
