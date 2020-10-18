@@ -22,7 +22,7 @@ export const handler = function (argv: {}) {
          * Months: 0-11 (Jan-Dec) 
          * Day of Week: 0-6 (Sun-Sat)
          */
-        "* 1 * * * *", // 
+        "0/3 * * * * *", // 每3s执行一次
         function () {
             console.log(`[${new Date().toISOString()}]开始执行Job, 启动时间:${this.regJobDate.toISOString()}`);
         },
