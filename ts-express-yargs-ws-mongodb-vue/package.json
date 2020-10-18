@@ -1,0 +1,37 @@
+{
+  "name": "ts-express-yargs-ws-mongodb-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cmd:help": "ts-node src/main.ts --help",
+    "cmd:web": "ts-node src/main.ts web 8083 --enable-ws --ws-path='/ws'",
+    "cmd:excel": "ts-node src/main.ts excel data/samples.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cheerio": "^0.22.22",
+    "@types/express": "^4.17.8",
+    "@types/mongodb": "^3.5.28",
+    "@types/node": "^14.11.10",
+    "@types/node-fetch": "^2.5.7",
+    "@types/ws": "^7.2.7",
+    "@types/xlsx": "^0.0.36",
+    "@types/yargs": "^15.0.9",
+    "ts-node": "^9.0.0",
+    "ts-node-dev": "^1.0.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.2",
+    "node-fetch": "^2.6.1",
+    "ws": "^7.3.1",
+    "xlsx": "^0.16.8",
+    "yargs": "^16.1.0"
+  }
+}

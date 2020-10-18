@@ -1,0 +1,77 @@
+[
+	{
+		"district": "江岸区",
+		"count": 47,
+		"area": 6092.4
+	},
+	{
+		"district": "江汉区",
+		"count": 98,
+		"area": 9105.24
+	},
+	{
+		"district": "硚口区",
+		"count": 173,
+		"area": 15272.34
+	},
+	{
+		"district": "汉阳区",
+		"count": 79,
+		"area": 9720.73
+	},
+	{
+		"district": "青山区",
+		"count": 43,
+		"area": 3765.24
+	},
+	{
+		"district": "武昌区",
+		"count": 13,
+		"area": 2260.95
+	},
+	{
+		"district": "洪山区",
+		"count": 345,
+		"area": 36226.07
+	},
+	{
+		"district": "东西湖区",
+		"count": 58,
+		"area": 6624.93
+	},
+	{
+		"district": "东湖高新区",
+		"count": 209,
+		"area": 24518.66
+	},
+	{
+		"district": "经济开发区",
+		"count": 30,
+		"area": 3521.36
+	},
+	{
+		"district": "江夏区",
+		"count": 93,
+		"area": 9652.91
+	},
+	{
+		"district": "黄陂区",
+		"count": 86,
+		"area": 9638.52
+	},
+	{
+		"district": "蔡甸区",
+		"count": 18,
+		"area": 1915.28
+	},
+	{
+		"district": "新洲区",
+		"count": 81,
+		"area": 8573.22
+	},
+	{
+		"district": "汉南区",
+		"count": 33,
+		"area": 3976.16
+	}
+]
