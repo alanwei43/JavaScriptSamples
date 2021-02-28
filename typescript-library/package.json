@@ -1,0 +1,24 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run build && ts-node test/index.ts",
+    "build": "tsc",
+    "pub-pkg": "tsc && npm run build && npm publish --registry xxxx --access public",
+    "login": "npm adduser --registry xxxx"
+  },
+  "files": [
+    "src/",
+    "index.d.ts",
+    "index.js"
+  ],
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.16",
+    "@types/node-fetch": "^2.5.7",
+    "ts-node": "^9.1.1"
+  }
+}
